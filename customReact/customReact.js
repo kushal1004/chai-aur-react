@@ -1,6 +1,7 @@
 function CustomeReact (element, container) {
   const domElement = document.createElement(element.type)
-  domElement.innerHTML = element.Children
+  domElement.innerHTML = element.children
+  
   for (const prop in element.props) {
     if (prop === 'children') continue
     domElement.setAttribute(prop, element.props[prop])
@@ -17,7 +18,7 @@ const reactElement = {
     href: 'https://google.com',
     target: '_blank'
   },
-  Children: 'Click me'
+  children: 'Click me'
 }
 
 const mainContainer = document.getElementById('root')
